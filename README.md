@@ -26,9 +26,11 @@ pip install -r requirment.txt
 ## 💉 Example
 
 <p align="center">
-<a href="#" align="center"><img src="https://github.com/watchakorn-18k/18K-Radio-Player/blob/master/Assets/exsam_1.png"/></a>
-<a href="#" align="center"><img src="https://github.com/watchakorn-18k/18K-Radio-Player/blob/master/Assets/exsam_2.png"/></a>
+<a href="#" align="center"><img  height="500" src="https://github.com/watchakorn-18k/18K-Radio-Player/blob/master/Assets/exsam_1.png"/></a>
+<a href="#" align="center"><img  height="500" src="https://github.com/watchakorn-18k/18K-Radio-Player/blob/master/Assets/exsam_2.png"/></a>
 </p>
-## How to use
+
+### How to use
+
 - Open Appication
 - Click symbol play
