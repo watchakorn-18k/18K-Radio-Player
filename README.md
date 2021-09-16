@@ -2,20 +2,20 @@
 <br>
 
 <p align="center">
- <a href="#" align="center"><img src="https://github.com/watchakorn-18k/Python-download-YT-MP3/blob/master/logo_title.png"/></a> 
+ <a href="#" align="center"><img width="200px"src="https://github.com/watchakorn-18k/18K-Radio-Player/blob/master/LOGO18K.png"/></a> 
   <br>
-<a href="#" align="center"><img src="https://img.shields.io/github/languages/code-size/watchakorn-18k/Python-download-YT-MP3"/></a>
+<a href="#" align="center"><img src="https://img.shields.io/github/languages/code-size/watchakorn-18k/18K-Radio-Player"/></a>
 </p>
 
 ## 🎈 18K-Radio-Player
-### A simple project to make gui on kivy mixed with the function listen to the 18k radio
+### A simple project to make gui on kivy mixed with the function listen to the 18k radio and show discord rich presence
 
 ### 📌 Requirement
-- python 3.8 ++
+- python 3.8++
 - Kivy==2.0.0
 
-## 📌 Python 3.8
-- https://www.python.org/downloads/release/python-380/
+## 📌 Python 3.9
+- https://www.python.org/downloads/
 
 
 ## 🔨 Pip install 
@@ -26,10 +26,9 @@ pip install -r requirment.txt
 ## 💉 Example
 
 <p align="center">
- <a href="#" align="center"><img src="https://github.com/watchakorn-18k/Python-download-YT-MP3/blob/Python-download-YT-MP3-v.2.0/font/1631424930689.gif"/></a> </p>
-
-I can't convert exe files, if anyone has the ability, please advise me. I converted the file and it got an error
+<a href="#" align="center"><img src="https://github.com/watchakorn-18k/18K-Radio-Player/blob/master/Assets/exsam_1.png"/></a>
+<a href="#" align="center"><img src="https://github.com/watchakorn-18k/18K-Radio-Player/blob/master/Assets/exsam_2.png"/></a>
+</p>
 ## How to use
-- You can open files in folders. YoutubeDownload file named run.cmd
-
-I can't convert exe files, if anyone has the ability, please advise me. I converted the file and it got an error
+- Open Appication
+- Click symbol play
