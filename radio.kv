@@ -10,10 +10,10 @@ Radio_Player:
             pos: self.pos
             size: self.size
     rows: 5
+    Menubar:
     Image:
         source: 'LOGO18K.png'
     Bottom_layout:
-
 <Bottom_layout>
     Label:
         id: name_song
@@ -24,7 +24,8 @@ Radio_Player:
     Label:
         id: name_dj
         text: "18K Radio"
-        size_hint: .1,1.2
+        size_hint: .1,1.1
+        pos: 10,0
         font_size: '30sp'
         font_name: 'fonts/TF_PHETHAI'
     ToggleButton: #MUTE_VOLUME
@@ -35,7 +36,7 @@ Radio_Player:
         background_color: '#1d1719'
         background_normal: '#221c1e'
         pos: '300dp','0dp' 
-        on_state: threading.Thread(target=root.on_state_mute_unmute(self)).start()
+        on_state: root.on_state_mute_unmute(self)
         Image:
             id: img_sound
             source: 'unmute.png'
@@ -43,8 +44,19 @@ Radio_Player:
             height: '40dp'
             pos: '200dp','10dp'
     Label:
-        height: '60dp'
-        background_color: '#1d1719'
+        height: '30dp'
+        canvas:
+            Color:
+                rgb: hex("#1d1719")
+            Rectangle:
+                size: self.size     
+                pos: self.pos
+            Clear
+            Color:
+                rgb: hex("#1d1719")
+            Rectangle:
+                size: [210,60]  
+                pos: [0,0]
         ToggleButton: #PLAY_PAUSE
             id: play_pause
             background_color: hex("#221c1e")
@@ -53,7 +65,7 @@ Radio_Player:
             background_color: '#1d1719'
             background_normal: '#221c1e'
             pos: '300dp','0dp' 
-            on_state: threading.Thread(target=root.on_state_play_pause(self)).start()
+            on_state: root.on_state_play_pause(self)
             Image:
                 id: img_player
                 source: 'play.png'
@@ -77,3 +89,21 @@ Radio_Player:
         Label:
             text: str(int(slider.value)) + "%"
             font_size: '10dp'
+<Menubar>:
+    ActionBar:
+        overflow_image: 'Logo.png'
+        pos_hint: {'top':1}
+        ActionView:
+            use_separator: False
+            ActionPrevious:
+                app_icon: '0'
+                app_icon_height: '40dp'
+                app_icon_width: '40dp'
+                title: 'สถานีความคิด ของทุกชีวิต ที่มีความทุกข์'
+                with_previous: True
+            ActionGroup:
+                mode: 'spinner'
+                ActionButton:
+                    text: 'ปิด'
+                    on_release: root.Close_app()
+
