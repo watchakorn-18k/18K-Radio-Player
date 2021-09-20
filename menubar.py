@@ -5,6 +5,7 @@ Config.set('graphics', 'height', '600')
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.lang import Builder
+from kivy.clock import Clock
 
 kv_string = '''
 <MyWidget>:
@@ -32,7 +33,10 @@ class MyWidget(Widget):
 
 class TestApp(App):
     def build(self):
+        self.runStuff()
         return MyWidget()
+    def runStuff(self):
+        Clock.schedule(App.get_running_app().stop(), 2)
 
 if __name__ == '__main__':
     TestApp().run()
