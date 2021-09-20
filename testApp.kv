@@ -1,0 +1,146 @@
+# #:import hex kivy.utils.get_color_from_hex
+# #:import threading threading
+# Radio_Player:
+# <Radio_Player>:
+#     orientation: 'vertical'
+#     canvas.before:
+#         Color:
+#             rgba: hex("#221c1e")
+#         Rectangle:
+#             pos: self.pos
+#             size: self.size
+#     rows: 5
+#     Menubar:
+#     Status:
+#     AsyncImage:
+#         id: img_djs
+#         source: 'LOGO18K.png'
+#         anim_delay: 0.1
+#     Bottom_layout:
+# <Bottom_layout>
+#     Label:
+#         id: name_song
+#         text:'root.radio_name'
+#         size_hint: .1,1.4
+#         font_size: '18sp'
+#         font_name: 'fonts/TF_PHETHAI'
+#     Label:
+#         id: name_dj
+#         text: "18K Radio"
+#         size_hint: .1,1.1
+#         font_size: '30sp'
+#         font_name: 'fonts/TF_PHETHAI'
+
+
+#     ToggleButton: #MUTE_VOLUME
+#         id: mute_volume
+#         background_color: hex("#221c1e")
+#         size_hint_y: None
+#         size_hint_x: None
+#         height: '60dp'
+#         width: '150dp'
+#         background_color: '#1d1719'
+#         background_normal: '#221c1e'
+#         pos: '300dp','10dp' 
+#         on_state: root.on_state_mute_unmute(self)
+#         Image:
+#             id: img_sound
+#             source: 'unmute.png'
+#             size_hint_y: None
+#             height: '40dp'
+#             pos: '212dp','10dp'
+#     Label:
+#         height: '30dp'
+#         canvas:
+#             Color:
+#                 rgb: hex("#1d1719")
+#             Rectangle:
+#                 size: self.size     
+#                 pos: self.pos
+#             Clear
+#             Color:
+#                 rgb: hex("#1d1719")
+#             Rectangle:
+#                 size: [210,60]  
+#                 pos: [0,0]
+#         ToggleButton: #PLAY_PAUSE
+#             id: play_pause
+#             background_color: hex("#221c1e")
+#             size_hint_y: None
+#             height: '60dp'
+#             background_color: '#1d1719'
+#             background_normal: '#221c1e'
+#             pos: '309dp','0dp' 
+#             on_state: root.on_state_play_pause(self)
+#             Image:
+#                 id: img_player
+#                 source: 'play.png'
+#                 size_hint_y: None
+#                 height: '40dp'
+#                 pos: '309dp','10dp'
+#         Slider:
+#             id: slider
+#             size_hint_y: None
+#             size_hint_x: None
+#             height: '60dp'
+#             width: '200dp'
+#             min:0
+#             pos: '10dp','10dp'
+#             max:100
+#             value: 80
+#             on_value: root.volume(self)
+#             cursor_image: 'slider.png'
+#             cursor_disabled_image: 'slider_disabled.png'
+#             background_horizontal:'slider_tab.png'
+#             background_width: '5dp'
+#         Label:
+#             text: str(int(slider.value)) + "%"
+#             font_size: '10dp'
+# <Menubar>:
+#     ActionBar:
+#         overflow_image: 'Logo.png'
+#         pos_hint: {'top':1}
+#         ActionView:
+#             use_separator: False
+#             ActionPrevious:
+#                 app_icon: '0'
+#                 app_icon_height: '40dp'
+#                 app_icon_width: '40dp'
+#                 title: '#DEV 18K | สถานีความคิด ของทุกชีวิต ที่มีความทุกข์'
+#                 with_previous: True
+#                 on_release: root.Tray()
+#             ActionButton:
+#                 icon: 'exit.png'
+#                 text: ''
+#                 on_release: root.Close_app()
+
+# <Status>:
+    
+#     Label:
+#         id: listener
+#         text: "         " + "18 คน"
+#         text_size: self.size
+        
+#         pos_hint: {'x': 1.0, 'y': 1.225}
+#         size_hint: 1.0,3.0
+#         font_size: '15sp'
+#         Image:
+#             source: 'headphone.png'
+#             pos: root.width-375, root.height + 320
+#                     #400               #600
+#             width: 40
+#             allow_stretch: True
+        
+#     Label:
+#         id: request_check
+#         text: "ON"
+#         text_size: self.size
+#         pos_hint: {'x': 0.8, 'y': 1.225}
+#         size_hint: 0.144,3.0 #OFF 0.156,3.0
+#         font_size: '15sp'
+#         Image:
+#             source: 'request.png'
+#             pos: root.width-65, root.height + 322 
+#                     #400               #600
+#             width: 44
+#             allow_stretch: True

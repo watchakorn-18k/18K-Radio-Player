@@ -1,4 +1,4 @@
-python -m PyInstaller --name 18k-youtube-download --noconsole --icon logo_title.ico main.py
+python -m PyInstaller --name 18k-Radio-Player --noconsole --icon logo_title.ico main.py
 
 
 # pyinstaller
