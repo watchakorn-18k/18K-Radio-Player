@@ -8,7 +8,9 @@
 </p>
 
 ## 🎈 18K-Radio-Player
+
 ### A simple project to make gui on kivy mixed with the function listen to the 18k radio and show discord rich presence
+### โปรเจคง่ายๆที่ทำเองเพื่อฝึกการใช้ GUI kivy อิอิ แน่นอน ทุกตัวคิดเอง ทุกบรรทัดเพระาไปอ่าน Doc เอา
 
 ### 📌 Requirement
 - python 3.8++
